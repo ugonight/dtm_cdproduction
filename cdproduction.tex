@@ -16,10 +16,10 @@
 \newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
 %
 \pagestyle{myheadings}
-\markright{\footnotesize \sf フリーソフトで作るアルバムCD製作講座}
+\markright{\footnotesize \sf 低予算で作るアルバムCD製作講座}
 
 % プリアンブル
-\title{フリーソフトで作るアルバムCD製作講座}
+\title{低予算で作るアルバムCD製作講座}
 \author{ugonight}
 
 \begin{document}
@@ -27,6 +27,9 @@
 %
     % タイトルを出力
     \maketitle
+
+    % 目次の表示
+    \tableofcontents
 
     \section{はじめに}
         奇跡的に入学一年前に設立したDTM同好会に入部してから、早6年が経とうとしています。
@@ -36,8 +39,7 @@
         とりあえず、今まで通りのCDが作れるような手順を書きますが、金銭的や技術的に厳しかったり、
         もっといい方法がある場合は、各々考えて何とかやってください。
 
-    % 目次の表示
-    \tableofcontents
+
 
 
     \section{話し合い}
@@ -106,7 +108,8 @@
                 \item 「Google Forms(\texttt{https://www.google.com/intl/ja\_jp/forms/about/})」にアクセスし、Googleアカウントでログインします。
                         \begin{figure}[htbp]
                             \begin{center}
-                            \includegraphics[width=12.0cm]{./form01.eps}
+                            \includegraphics[width=12.0cm]{./image/form01.eps}
+                            \caption{Google Forms トップページ}
                             \label{fig:form01}
                             \end{center}
                         \end{figure}
@@ -116,14 +119,16 @@
                 \item フォーム作成ページが出てきたら、タイトルや説明文を記述します。
                     \begin{figure}[htbp]
                         \begin{center}
-                        \includegraphics[width=12.0cm]{./form02.eps}
+                        \includegraphics[width=12.0cm]{./image/form02.eps}
+                        \caption{フォーム編集画面}
                         \label{fig:form02}
                         \end{center}
                     \end{figure}
                 \item 下部の「質問を追加」ボタンを押して、質問項目を追加していきます。
                     \begin{figure}[htbp]
                         \begin{center}
-                        \includegraphics[width=12.0cm]{./form03.eps}
+                        \includegraphics[width=12.0cm]{./image/form03.eps}
+                        \caption{質問項目の種類}
                         \label{fig:form03}
                         \end{center}
                     \end{figure}
@@ -144,7 +149,8 @@
                     「送信方法」の項目を切り替えて、メールを送信したり、リンクを取得することができます。
                     \begin{figure}[htbp]
                         \begin{center}
-                        \includegraphics[width=12.0cm]{./form04.eps}
+                        \includegraphics[width=12.0cm]{./image/form04.eps}
+                        \caption{フォームの共有}
                         \label{fig:form04}
                         \end{center}
                     \end{figure}
@@ -155,14 +161,16 @@
                     \begin{figure}[htbp]
                         \begin{minipage}{0.5\hsize}
                          \begin{center}
-                          \includegraphics[width=70mm]{./form05.eps}
+                          \includegraphics[width=70mm]{./image/form05.eps}
                          \end{center}
+                         \caption{回答の集計}
                          \label{fig:form05}
                         \end{minipage}
                         \begin{minipage}{0.5\hsize}
                          \begin{center}
-                          \includegraphics[width=70mm]{./form06.eps}
+                          \includegraphics[width=70mm]{./image/form06.eps}
                          \end{center}
+                         \caption{回答の集計（表形式）}
                          \label{fig:form06}
                         \end{minipage}
                     \end{figure}
@@ -173,6 +181,8 @@
         
         \subsection{提出形式}
             提出する曲データのファイル形式を決めておきましょう。
+            マスタリング前は曲としての最良の原型が残った、よい波形で書き出すことを心がけましょう。
+
             \subsubsection{フォーマット:wav}
                 ファイルの拡張子が「.wav」になるようにしてください。wavは最も標準的に使われている非圧縮形式の音声フォーマットで、
                 マスタリングやCDに焼く際にデータの劣化が少ないです。
@@ -186,14 +196,46 @@
                 \end{enumerate}
                 というような作業を行って、wavファイルを作成してください。
 
-            \subsubsection{ピークレベル:-3~-6dB}
+            \subsubsection{ピークレベル:-3～-6dB}
                 ピークレベルとは、信号のレベルで一番高い瞬間の値を表します。
+                信号が振り切れているところがあると、クリップノイズを生じてしまいます。
+                マスタリングで音圧を上げられるように、提出音源はちょうどよい音量に抑えておきましょう。
                 \begin{figure}[htbp]
                     \begin{center}
-                    \includegraphics[width=12.0cm]{./format01.eps}
+                    \includegraphics[width=2.0cm]{./image/format01.eps}
+                    \caption{ピークレベル}
                     \label{fig:format01}
                     \end{center}
                 \end{figure}
+
+                ピークメーターはDAWのMIX画面で確認できます。
+                マスタートラックのピークメーターが、赤いところまで来ていたら音量を下げてください。
+
+            \subsubsection{マスターにはダイナミクス系FXをかけない}
+                マスタートラックというのは全てのトラックの音が合わさった、曲が出力されるトラックのことを言います。
+                メイン、output等DAWによって表記は異なりますが、大体MIX画面の端の方にあります。
+
+                通常DAWはトラックごとにエフェクトがかけられるようになっていて、マスタートラックにもエフェクトをかけることができます。
+                曲の音圧を上げるために、マスタートラックにマキシマイザーやコンプレッサー等のダイナミクス系エフェクトをかける人がいますが、
+                曲を提出する際は、マスタリングに差し支えるので何も挿さないでください。
+
+            \subsubsection{ビット深度:16bit}
+                ビット深度は音量レベルの精度を表します。
+                
+                設定できる値として8bitや24bit,32bit floatがりますが、8bitは精度が低く、24bit,32bit floatは対応していないソフトなどがあるので、
+                16bitにしておくのが無難です。
+
+            \subsubsection{サンプリング周波数:44.1kHz}
+                サンプリング周波数は一秒間のサンプリング回数を表します。
+                \footnote{時間のグラフを考えたとき、ビット深度が縦軸、サンプリング周波数が横軸の制度にあたります。}
+                
+                波形を再現するには1周期最低2点の波形情報が必要で、人間が聞き取れる最低周波数が20kHzなので、
+                20kHz×2=40kHzが、音を表現するのに必要最低限のサンプリング周波数となります。
+                
+                44.1kHzは一般的なCDのサンプリング周波数であり、ほとんどのソフトで対応しているので、これに設定しておくのが無難です。
+            
+            
+
 %
 %
 \end{document}

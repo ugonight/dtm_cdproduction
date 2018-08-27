@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2018.5.10)  27 AUG 2018 18:19
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.sjis) (TeX Live 2018/W32TeX) (preloaded format=platex 2018.5.10)  27 AUG 2018 21:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/ugonight/Desktop/report/DTM/cdproduction
-(c:/Users/ugonight/Desktop/report/DTM/cdproduction.tex
+**c:/Users/ugonight/Desktop/report/DTM/dtm_cdproduction/cdproduction
+(c:/Users/ugonight/Desktop/report/DTM/dtm_cdproduction/cdproduction.tex
 pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 4)
 Babel <3.20> and hyphenation patterns for 84 language(s) loaded.
 (c:/texlive/2018/texmf-dist/tex/platex/jsclasses/jsarticle.cls
@@ -217,18 +217,18 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 29.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 5.76599pt on input line 29.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 32.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 32.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 31.
+(Font)              scaled to size 13.83836pt on input line 32.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 31.
+(Font)              scaled to size 13.83836pt on input line 32.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 31.
+(Font)              scaled to size 13.83836pt on input line 32.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 31.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 40.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 40.
+(Font)              scaled to size 13.83836pt on input line 32.
  (./cdproduction.toc
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 3.
@@ -243,68 +243,64 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 \openout3 = `cdproduction.toc'.
 
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 49.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
+(Font)              scaled to size 11.53198pt on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 54.
 
 (c:/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 54.
+(Font)              scaled to size 9.60999pt on input line 56.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 56.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 54.
+(Font)              scaled to size 9.60999pt on input line 56.
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 93.
+(Font)              scaled to size 7.68799pt on input line 95.
  [2]
-File: ./form01.eps Graphic file (type eps)
- <./form01.eps>
-File: ./form02.eps Graphic file (type eps)
+File: ./image/form01.eps Graphic file (type eps)
 
-<./form02.eps>
-File: ./form03.eps Graphic file (type eps)
- <./form03.eps> [3] [4]
-File: ./form04.eps Graphic file (type eps)
- <./form04.eps>
-File: ./form05.eps Graphic file (type eps)
- <./form05.eps>
-File: ./form06.eps Graphic file (type eps)
+<./image/form01.eps>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 112.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 112.
+File: ./image/form02.eps Graphic file (type eps)
+ <./image/form02.eps>
+File: ./image/form03.eps Graphic file (type eps)
+ <./image/form03.eps> [3]
+File: ./image/form04.eps Graphic file (type eps)
 
-<./form06.eps>
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 156--168
+<./image/form04.eps>
+File: ./image/form05.eps Graphic file (type eps)
+ <./image/form05.eps>
+File: ./image/form06.eps Graphic file (type eps)
+ <./image/form06.eps>
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 162--176
 [][]$[]$[] []$[]$[] 
  []
 
-[5]
+[4] [5]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 181.
+(Font)              scaled to size 6.72699pt on input line 191.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 181.
-File: ./format01.eps Graphic file (type eps)
- <./format01.eps>
-
-LaTeX Warning: Float too large for page by 103.37839pt on input line 196.
-
-[6] [7] (./cdproduction.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(Font)              scaled to size 5.76599pt on input line 191.
+File: ./image/format01.eps Graphic file (type eps)
+ <./image/format01.eps> [6] [7] (./cdproduction.aux) ) 
 Here is how much of TeX's memory you used:
- 1954 strings out of 493281
- 22616 string characters out of 6148126
+ 1959 strings out of 493281
+ 22800 string characters out of 6148126
  92187 words of memory out of 5000000
- 5852 multiletter control sequences out of 15000+600000
- 24920 words of font info for 109 fonts, out of 8000000 for 9000
+ 5855 multiletter control sequences out of 15000+600000
+ 25500 words of font info for 112 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 27i,8n,27p,256b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,27p,273b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on cdproduction.dvi (7 pages, 14676 bytes).
+Output written on cdproduction.dvi (7 pages, 18164 bytes).

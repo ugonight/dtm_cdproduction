@@ -7,4 +7,7 @@
 \contentsline {subsection}{\numberline {3.1}提出方法}{3}
 \contentsline {subsection}{\numberline {3.2}提出形式}{6}
 \contentsline {subsubsection}{\numberline {3.2.1}フォーマット:wav}{6}
-\contentsline {subsubsection}{\numberline {3.2.2}ピークレベル:-3\nobreakspace {}-6dB}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}ピークレベル:-3～-6dB}{6}
+\contentsline {subsubsection}{\numberline {3.2.3}マスターにはダイナミクス系FXをかけない}{7}
+\contentsline {subsubsection}{\numberline {3.2.4}ビット深度:16bit}{7}
+\contentsline {subsubsection}{\numberline {3.2.5}サンプリング周波数:44.1kHz}{7}
