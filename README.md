@@ -1,2 +1,2 @@
 # dtm_cdproduction
-LaTeX documents
+LaTeX document

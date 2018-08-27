@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}はじめに}{1}
+\contentsline {section}{\numberline {2}話し合い}{1}
+\contentsline {subsection}{\numberline {2.1}役割分担}{1}
+\contentsline {subsection}{\numberline {2.2}タイトル決め}{2}
+\contentsline {subsection}{\numberline {2.3}締め切り}{2}
+\contentsline {section}{\numberline {3}曲集め}{2}
+\contentsline {subsection}{\numberline {3.1}提出方法}{3}
+\contentsline {subsection}{\numberline {3.2}提出形式}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}フォーマット:wav}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}ピークレベル:-3\nobreakspace {}-6dB}{6}
