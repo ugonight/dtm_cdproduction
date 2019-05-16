@@ -4,6 +4,8 @@
 \usepackage{bm}
 \usepackage{graphicx}
 \usepackage{ascmac}
+\usepackage{url}
+\usepackage{here}
 %
 \setlength{\textwidth}{\fullwidth}
 \setlength{\textheight}{39\baselineskip}
@@ -20,7 +22,7 @@
 
 % プリアンブル
 \title{低予算で作るアルバムCD製作講座}
-\author{ugonight}
+%\author{ugonight}
 
 \begin{document}
 %
@@ -227,14 +229,232 @@
 
             \subsubsection{サンプリング周波数:44.1kHz}
                 サンプリング周波数は一秒間のサンプリング回数を表します。
-                \footnote{時間のグラフを考えたとき、ビット深度が縦軸、サンプリング周波数が横軸の制度にあたります。}
+                \footnote{音声波形のグラフを考えたとき、ビット深度が縦軸、サンプリング周波数が横軸の精度にあたります。}
                 
                 波形を再現するには1周期最低2点の波形情報が必要で、人間が聞き取れる最低周波数が20kHzなので、
                 20kHz×2=40kHzが、音を表現するのに必要最低限のサンプリング周波数となります。
                 
                 44.1kHzは一般的なCDのサンプリング周波数であり、ほとんどのソフトで対応しているので、これに設定しておくのが無難です。
+    
+    \section{ジャケット作成}
+        \subsection{画像準備}
+            ジャケットの画像ファイルを用意します。
+            一般的なCDジャケットの大きさは「120mm×120mm」なので、画像のサイズは{\bf 1653pixel × 1653pixel}以上が丁度いいでしょう。
+            ジャケットを誰かに頼む時は、画像ファイルは{\bf png,jpg}等、確認できるフォーマットで書き出してもらいましょう。
+
+        \subsection{ジャケット印刷}
+            ジャケット印刷は印刷会社に頼んだ方が安く済みます。少なくともコンビニで印刷するよりは安いです。
+            手元に安く印刷できる環境があればそちらの方がいいかもしれませんが、ここでは印刷会社にジャケットを印刷してもらう方法を書いていきます。
+
+            \subsection{注文}
+                今回は「キングプリンターズ」(\url{https://kingprinters.com/})という印刷会社で印刷を注文する方法を説明します。
+
+                以下は最も安いであろう注文例です。
+                \begin{description}
+                    \item[種類] メニューの「印刷のご注文」から選べます。折り返し等なくていいなら{\bf フライヤー・チラシ}の項目を選びましょう。
+                                「100枚～」と「10枚～」の項目がありますが、「10枚～」で50枚印刷するよりは、「100枚～」で100枚印刷した方が安いです。
+                    \item[サイズ] 「CD」のサイズが選べます
+                    \item[用紙] 「コート70kg」か「マットコート70kg」が一番安いです。
+                    \item[刷色] 表:ジャケット、裏:曲リストのようにするなら「表カラー 裏白黒」を選択するといいでしょう。
+                    \item[部数・価格] 注文日から一週間くらいの仕上がり日が最安値で、一日後が最短納期です。配送に1・2日かかると考えて選びましょう。  
+                \end{description}
+
+                \begin{figure}[htbp]
+                    \begin{center}
+                    \includegraphics[width=10.0cm]{./image/kinpri01.eps}
+                    \caption{注文例}
+                    \label{fig:kinpri01}
+                    \end{center}
+                \end{figure}
+
+                選び終わったら「カートに入れる」ボタンを押しましょう。
             
-            
+            \subsection{印刷データ作成}
+                キングプリンターズで入稿するにはpng,jpgのような画像ファイルではなく、ai,psd形式での印刷データを作成する必要があります。
+                ブラウザ上のデザインツールや、オフィス注文もできるようですが、ここではpsd形式で入稿する方法を説明します。
+
+                使うペイントソフトは「MediBang Paint」(\url{https://medibangpaint.com/})です。無料で使えるのでダウンロードしておいてください。
+
+                \begin{enumerate}
+                    \item テンプレートページ(\url{https://kingprinters.com/user_guide/templates/teiban})からps形式のテンプレートをダウンロードします。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/kinpri02.eps}
+                            \caption{テンプレートダウンロード}
+                            \label{fig:kinpri02}
+                            \end{center}
+                        \end{figure}
+                    \item ダウンロードした「cd(120x120)-ps」を解凍し、「120x120\_omote.psd」か「120x120\_ura.psd」をMediBang Paintで開きます。
+                    \item レイヤーウィンドウにジャケットの画像ファイルをドロップします。次に「選択範囲(S)」→「変形(T)」を選択し、
+                          サイズや位置を調節してガイドの線にジャケット画像を合わせます。
+                          \begin{figure}[H]
+                                \begin{center}
+                                \includegraphics[width=10.0cm]{./image/kinpri03.eps}
+                                \caption{ジャケット調整}
+                                \label{fig:kinpri03}
+                                \end{center}
+                           \end{figure}
+                    \item イラストを作成する際はカラーモードはRGBだと思いますが、印刷用にカラーモードをCMYKにする必要があります。
+                           「カラーマネジメント設定の使い方(\url{https://medibangpaint.com/use/2018/05/color-management/})」を参考にして、CMYK表示にしてください。
+                           \footnote{CMYKモードの表示が切り替えられない場合は、一度MadiBang Paintを閉じて、ディスプレイ設定をやり直してください。}
+                           \begin{figure}[H]
+                                \begin{center}
+                                \includegraphics[width=5.0cm]{./image/kinpri04.eps}
+                                \caption{カラーマネジメント設定例}
+                                \label{fig:kinpri04}
+                                \end{center}
+                            \end{figure}
+                            CMYK表示ではRGBと色味が違ってきます。気になる場合は「フィルタ(R)」→「色相(H)」で調整するといいでしょう。
+                            できたら「ファイル」→「書き出し（CMYK形式 PSD）」で保存します。
+                    \item 「120x120\_omote.psd」「120x120\_ura.psd」が保存できたら、二つを一つのzipファイルにまとめておきます。
+                    \item 作成した印刷データを入稿します。キングプリンターズのカート(\url{https://kingprinters.com/cart})をクリックして、情報入力画面を出します。
+                           「サンプル画像をアップロード」にはジャケット画像（psdでなくてもいい）を、「印刷データを選択・アップロード」には先ほど作成したzipファイルをアップロードしてください。
+                           できたら「次へ」を押します。
+                            \begin{figure}[H]
+                                \begin{center}
+                                \includegraphics[width=10.0cm]{./image/kinpri05.eps}
+                                \caption{情報入力}
+                                \label{fig:kinpri05}
+                                \end{center}
+                            \end{figure}
+                    \item 配達先・支払方法等を入力し、注文を確定します。
+                \end{enumerate}
+                
+
+    \section{CD作成}
+            \subsection{ディスクデュプリケーターの使い方}
+                2019年3月現在、我が同好会には学校で買ったディスクデュプリケーターがあります。
+                \footnote{もし使えなくなってしまった場合は、手分けしてPCでCDを焼くか、業者にCD作成を頼んでください。}
+                ディスクデュプリケーターは、CDのレーベル印刷とデータ書き込みを一緒に行なう機械です。
+                
+                ここでは、ここにあるディスクデュプリケーターの「EPSON PP-50」の使い方を説明します。
+
+                \subsubsection{ドライバインストール}
+                    PCにPP-50と通信するためのドライバとCD作成ソフトをインストールします。
+                    今回インストールする「TotalDiscMaker」はそのどちらも含まれています。
+
+                    \begin{enumerate}
+                        \item \url{https://www.epson.jp/dl_soft/readme/25559.htm}から「TotalDiscMaker」をダウンロードしてください。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm01.eps}
+                            \caption{TotalDiscMakerのダウンロード}
+                            \label{fig:tdm01}
+                            \end{center}
+                        \end{figure}
+                        \item ダウンロードしたzipファイルを解凍し、その中にある「setup.exe」を起動してください。
+                        \item 「次へ(N)」を押していくとインストール場所を聞かれるので、任意の場所を指定します。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm02.eps}
+                            \caption{インストールの場所指定}
+                            \label{fig:tdm02}
+                            \end{center}
+                        \end{figure}
+                        \item 機種の選択画面が出てくるので、一番下の「EPSON PP-50BD / PP-50 / PP-7050BD（USB接続）」を選択します。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm03.eps}
+                            \caption{機種選択}
+                            \label{fig:tdm03}
+                            \end{center}
+                        \end{figure}
+                        \item セットアップタイプでは「すべて(C)」を選択します。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm04.eps}
+                            \caption{セットアップタイプ}
+                            \label{fig:tdm04}
+                            \end{center}
+                        \end{figure}
+                        \item その後「インストール」を押すとインストールが開始されます。
+                        \item インストール中にPP-50の検索をされるので、PP-50とPCをUSB接続し、電源を入れます。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm05.eps}
+                            \caption{機器検索}
+                            \label{fig:tdm05}
+                            \end{center}
+                        \end{figure}
+                        \item 図\ref{fig:tdm06}のように表示されれば、インストール完了です。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/tdm06.eps}
+                            \caption{インストール完了}
+                            \label{fig:tdm06}
+                            \end{center}
+                        \end{figure}
+                    \end{enumerate}
+                    
+
+                \subsubsection{使い方}
+                    CDデータの作成から印刷までの流れを説明します。
+
+                    \begin{enumerate}
+                        \item PP-50を電源に繋ぎ電源をつけ、PCとUSB端子で接続します。
+                
+                        \item PC側ではインストールした「EPSON Total Disc Maker」を立ち上げます。
+                        すると、図\ref{fig:pp5001}のような画面が出てくるので「音楽CD」を選択し「適用」ボタンを押します。
+
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/pp5001.eps}
+                            \caption{ディスクの種類選択}
+                            \label{fig:pp5001}
+                            \end{center}
+                        \end{figure}
+
+                        \item 音楽編集画面に写るので、ウィンドウ上に集めた楽曲をD\&Dし、情報を入れていきます。（入れなくてもいいです）
+                            \footnote{PCにCDを取り込んだ時に情報を取得できるようにするには、iTunes等でCDDBに曲情報を送信する必要があります。}
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/pp5002.eps}
+                            \caption{音楽編集}
+                            \label{fig:pp5002}
+                            \end{center}
+                        \end{figure}
+
+                        \item 上のメニューから「レーベル」を選択します。この画面でCDに印刷するレーベルのデザインをします。
+                            タイトル情報等を入れられるテンプレートや、自分で作った画像を挿入できる機能もあります。
+                            自由にデザインしてください。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/pp5003.eps}
+                            \caption{レーベルデザイン}
+                            \label{fig:pp5003}
+                            \end{center}
+                        \end{figure}
+                        
+                        \item 上のメニューから「発行」を選択します。大体図\ref{fig:pp5004}のように設定しておけば問題ありません。
+                            設定ができたら右下の「発行(P)」ボタンを押します。
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/pp5004.eps}
+                            \caption{発行}
+                            \label{fig:pp5004}
+                            \end{center}
+                        \end{figure}
+
+                        \item 「EPSON Total Disc Monitor」が表示され、印刷が開始されます。
+                        1番のスタッカーに空のCD-Rをセットし、全部出来上がったら2番のスタッカーから取り出します。
+                            
+                        \begin{figure}[H]
+                            \begin{center}
+                            \includegraphics[width=10.0cm]{./image/pp5005.eps}
+                            \caption{印刷}
+                            \label{fig:pp5005}
+                            \end{center}
+                        \end{figure}
+                            この印刷でのトラブルが多いので、以下に注意事項を述べます。
+                                \begin{itemize}
+                                    \item 途中でPCの電源を落としたりスリープモードにしたり画面を閉じたりUSB接続を切断したりしないこと。印刷が止まってしまいます。
+                                    \item 不用意にディスクカバーを開けないこと。印刷が止まってしまいます。
+                                    \item レーベルが印刷されないなどの問題が発生した場合は、「Total Disk Maker」を再インストールすると直るかもしれないです。
+                                \end{itemize}
+                    \end{enumerate}
+
+                
+
 
 %
 %
